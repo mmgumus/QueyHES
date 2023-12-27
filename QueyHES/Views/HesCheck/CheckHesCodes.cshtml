@@ -1,0 +1,30 @@
+@{
+    var riskyCodes = ViewBag.RiskyCodes as List<HesCodeCheckResponse>;
+    var risklessCodes = ViewBag.RisklessCodes as List<HesCodeCheckResponse>;
+}
+
+<h2>Riskli HES Kodları</h2>
+<ul>
+    @foreach (var code in riskyCodes)
+    {
+        <li>
+
+            @code
+
+            .Hes
+        </li>
+    }
+</ul>
+
+<h2>Risksiz HES Kodları</h2>
+<ul>
+    @foreach (var code in risklessCodes)
+    {
+        <li>
+
+            @code
+
+            .Hes
+        </li>
+    }
+</ul>
